@@ -1,0 +1,129 @@
+:root {
+  --accent: teal;
+}
+
+.wrap {
+  width: 75%;
+  margin: 25px auto;
+}
+
+.post {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+  border-bottom: 1px solid #ccc;
+  padding: 1.5em 0;
+}
+
+.post a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.post a:hover {
+  color: lighten(var(--accent), 10%);
+}
+
+.feat-img {
+  width: 24%;
+  float: left;
+  margin-right: 2%;
+}
+
+.feat-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 480px) {
+  .feat-img {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.article {
+  width: 74%;
+  float: left;
+}
+
+.article header p.author-cred {
+  background: #f1f1f1;
+  padding: .5em;
+}
+
+.article header ul.cat {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.article header ul.cat li {
+  color: #ccc;
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.article header ul.cat li a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.article header ul.cat li a:hover {
+  color: lighten(var(--accent), 10%);
+}
+
+h2 {
+  font-size: 175%;
+  line-height: 1.5em;
+  margin: .5em 0;
+}
+
+h2 a {
+  color: #333;
+}
+
+footer {
+  width: 100%;
+  overflow: auto;
+}
+
+ul.tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.tags li {
+  display: block;
+  margin-top: 2%;
+}
+
+ul.tags li:first-child {
+  margin-top: 0;
+}
+
+ul.tags li a {
+  color: #fff !important;
+  padding: .3em .65em;
+  background: var(--accent);
+  display: block;
+  text-decoration: none;
+}
+
+ul.tags li a:hover {
+  background: darken(var(--accent), 15%);
+}
+
+.more-link {
+  text-align: center;
+  background: var(--accent);
+  color: #fff !important;
+  padding: .5em .75em;
+  display: inline-block;
+  float: right;
+}
+
+.more-link:hover {
+  background: darken(var(--accent), 10%);
+}

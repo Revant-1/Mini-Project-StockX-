@@ -10,14 +10,10 @@ function Features() {
     console.log("clicked")
   };
 
-  const handleClick1 = () => {
-    // Use the navigate function to redirect to the external URL
-    window.open('http://localhost:8501', '_blank');
-  };
-
+ 
   return (
     <div>
-      <button class="card" onClick={() => handleClick1()}>
+      <button class="card" onClick={() => handleClick('/portfolio-performance-tracking')}>
         <div class="pop" />
         <h5>Portfolio Performance Tracking</h5>
       </button>

@@ -1,9 +1,17 @@
-import React from 'react'
+import React from 'react';
+import './style/portfolio.css'
 
-function Tracker() {
+const Tracker = () => {
+
   return (
-    <div>Tracker</div>
-  )
-}
+    <div>
+      
+      <h1>Testing Backend Connection</h1>
+   
+    </div>
 
-export default Tracker
+
+  );
+};
+
+export default Tracker;
