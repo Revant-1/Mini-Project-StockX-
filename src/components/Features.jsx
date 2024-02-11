@@ -12,19 +12,21 @@ function Features() {
 
  
   return (
+
+    
     <div>
-      <button class="card" onClick={() => handleClick('/portfolio-performance-tracking')}>
-        <div class="pop" />
-        <h5>Portfolio Performance Tracking</h5>
-      </button>
-      <button class="card1" onClick={() => handleClick('/financial-news')}>
-        <div class="pop1" />
-        <h5>Financial News</h5>
-      </button>
-      <button class="card2" onClick={() => handleClick('/stock-price-trend-prediction')}>
-        <div class="pop2" />
-        <h5>Stock Price/Trend Prediction</h5>
-      </button>
+ 
+<div class="mt-3 flex space-x-12">
+    
+    <button><div class="bg-[#f8f9fa] shadow-md rounded-lg px-2 py-1" 
+    onClick={() => handleClick('/portfolio-performance-tracking')}>Portfolio Performance Tracking</div></button>
+    
+    <button><div class="bg-[#f8f9fa] shadow-md rounded-lg  px-2 py-1"
+    onClick={() => handleClick('/financial-news')}>Financial News</div></button>
+
+    <button><div class="bg-[#f8f9fa] shadow-md rounded-lg px-2 py-1"
+    onClick={() => handleClick('/stock-price-trend-prediction')}>Stock Price/Trend Prediction</div></button>
+</div>
     </div>
   );
 }
