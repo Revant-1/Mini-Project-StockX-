@@ -1,38 +1,55 @@
 import React, { useState, useEffect } from 'react';
-import Stats from './Stats'
+import { useParams } from 'react-router-dom';
+import Dougnut from "./Piechart"
 import axios from 'axios';
 
+
+
+
 function Section() {
+
+  const { search } = useParams();
+
+  const [ebitda, setEbitda] = useState('');
+  const [weekHigh, setWeekHigh] = useState('');
+  const [weekLow, setWeekLow] = useState('');
+  const [peRatio, setPeRatio] = useState('');
+  const [beta, setBeta] = useState('');
+  const [d2e, setD2e] = useState('');
+
+
+  useEffect(() => {
+    axios.get(`http://localhost:3001/searched/${search}`)
+      .then(response => {
+        const data = response.data;
+        setEbitda(data.fdata);
+        setWeekHigh(data.weekHigh);
+        setWeekLow(data.weekLow);
+        setPeRatio(data.peRatio);
+        setBeta(data.beta);
+        setD2e(data.d2e);
+
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  }, [search]);
+
   return (
-    <div>{/*
-    Heads up! 👋
-  
-    This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
-  */}
-  
+    <div>
   <section>
     <div className="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
       <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16">
         <div className="mx-auto max-w-lg text-center lg:mx-0 ltr:lg:text-left rtl:lg:text-right">
           
-          <Stats />
-          <Stats />
-          <Stats />
-          <Stats />
+          <Dougnut />
 
-  
-          {/* <a
-            href="#"
-            className="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
-          >
-            Get Started Today
-          </a> */}
         </div>
   
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
           <a
             className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-            href="/accountant"
+            href="#"
           >
             <span className="inline-block rounded-lg bg-gray-50 p-3">
               <svg
@@ -55,16 +72,16 @@ function Section() {
               </svg>
             </span>
   
-            <h2 className="mt-2 font-bold">Accountant</h2>
+            <h2 className="mt-2 font-bold">{weekHigh}</h2>
   
             <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-              Lorem ipsum dolor sit amet consectetur.
+            52-Week High
             </p>
           </a>
   
           <a
             className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-            href="/accountant"
+            href="#"
           >
             <span className="inline-block rounded-lg bg-gray-50 p-3">
               <svg
@@ -87,16 +104,16 @@ function Section() {
               </svg>
             </span>
   
-            <h2 className="mt-2 font-bold">Accountant</h2>
+            <h2 className="mt-2 font-bold">{weekLow}</h2>
   
             <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-              Lorem ipsum dolor sit amet consectetur.
+            52-Week Low
             </p>
           </a>
   
           <a
             className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-            href="/accountant"
+            href="#"
           >
             <span className="inline-block rounded-lg bg-gray-50 p-3">
               <svg
@@ -119,16 +136,16 @@ function Section() {
               </svg>
             </span>
   
-            <h2 className="mt-2 font-bold">Accountant</h2>
+            <h2 className="mt-2 font-bold">{peRatio}</h2>
   
             <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-              Lorem ipsum dolor sit amet consectetur.
+             forward PE 
             </p>
           </a>
   
           <a
             className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-            href="/accountant"
+            href="#"
           >
             <span className="inline-block rounded-lg bg-gray-50 p-3">
               <svg
@@ -151,16 +168,16 @@ function Section() {
               </svg>
             </span>
   
-            <h2 className="mt-2 font-bold">Accountant</h2>
+            <h2 className="mt-2 font-bold">{beta}</h2>
   
             <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-              Lorem ipsum dolor sit amet consectetur.
+            Beta
             </p>
           </a>
   
           <a
             className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-            href="/accountant"
+            href="#"
           >
             <span className="inline-block rounded-lg bg-gray-50 p-3">
               <svg
@@ -183,16 +200,16 @@ function Section() {
               </svg>
             </span>
   
-            <h2 className="mt-2 font-bold">Accountant</h2>
+            <h2 className="mt-2 font-bold">{ebitda}</h2>
   
             <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-              Lorem ipsum dolor sit amet consectetur.
+            ebitda
             </p>
           </a>
   
           <a
             className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-            href="/accountant"
+            href="#"
           >
             <span className="inline-block rounded-lg bg-gray-50 p-3">
               <svg
@@ -215,11 +232,10 @@ function Section() {
               </svg>
             </span>
   
-            <h2 className="mt-2 font-bold">Accountant</h2>
+            <h2 className="mt-2 font-bold">{d2e}</h2>
   
             <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-              TOTAL sale
-            </p>
+            Debt To Equity            </p>
           </a>
         </div>
       </div>
