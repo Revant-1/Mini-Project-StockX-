@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Stock Analysis and Prediction Tool
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a second-year mini-project designed to provide users with a comprehensive suite of tools for stock market analysis. It integrates four main functionalities: stock analysis, portfolio performance analysis, financial news aggregation, and stock price prediction (for educational purposes).
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+* **Stock Analysis:**
+    * Provides detailed information on individual stocks, including historical data, key metrics, and company profiles.
+    * Enables users to visualize stock trends through interactive charts and graphs.
+    * Offers tools for comparing different stocks based on various criteria.
+* **Portfolio Performance Analyzer:**
+    * Allows users to track the performance of their virtual or real investment portfolios.
+    * Calculates key portfolio metrics such as returns, risk, and diversification.
+    * Provides visualizations of portfolio growth and asset allocation.
+* **Financial News:**
+    * Aggregates financial news from various sources to keep users updated on market trends and events.
+    * Presents news in a clear and organized format, allowing users to quickly identify relevant information.
+    * May include features for filtering or searching news based on keywords or topics.
+* **Stock Price Prediction (Educational):**
+    * Implements a Long Short-Term Memory (LSTM) model to predict stock prices.
+    * **Note:** Predictions are for educational purposes only and should not be used for actual investment decisions.
+    * Provides insights into the application of machine learning in finance.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* \[Specify the programming languages, frameworks, libraries, and databases used in your project. For example:]
+    * Frontend: React, HTML, CSS, JavaScript
+    * Backend: Node
+    * Data Visualization: \Chart.js, D3.js
+    * Machine Learning: TensorFlow, Keras
+    * Database: \MongoDB
 
-### `npm test`
+* **LSTM Stock Prediction Model:**
+    * Repository: [https://github.com/Revant-1/LSTM-Stock-Prediction-Model](https://github.com/Revant-1/LSTM-Stock-Prediction-Model)
+* **Stock Portfolio Analyzer/Tracker:**
+    * Repository: [https://github.com/Revant-1/Stock-portfolio-analyzer-tracker](https://github.com/Revant-1/Stock-portfolio-analyzer-tracker)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
